@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script async src="./app.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo text-4xl">ShoeStop</h1>
+        </div>
+        <div class="search">
+            <input type="search" id="search" placeholder="search your brand" required>
+            <button id="srch">Search</button>
+        </div>
+        <div class="login-register">
+            <button class="login">Login</button>
+            <button class="register">Register</button>
+        </div>
+        <div class="cart">
+
+            <a href="./cart.html" onclick="readLocalStorage()">
+                <span id="wishlist">(0)</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </a>
+           
+        </div>
+    </header>
+    <main>
+        <div class="filters">
+            <h2>Filter By</h2>
+            <ul>
+                <li class="dropdown">
+                    <button class="dropbtn">Gender</button>
+                    <ul class="dropdown-content">
+                        <li onclick="searchByGender(event,'male')">Male</li>
+                        <li onclick="searchByGender(event,'female')">Female</li>
+                        <li onclick="searchByGender(event,'universal')">Universal</li>
+                    </ul>
+                </li>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Style</button>
+                    <ul class="dropdown-content">
+                        <li onclick="searchByStyle(event,'loafer')">Loafer</li>
+                        <li onclick="searchByStyle(event,'oxford')">Oxford</li>
+                        <li onclick="searchByStyle(event,'heels')">Heels</li>
+                        <li onclick="searchByStyle(event,'running')">Running</li>
+                        <li onclick="searchByStyle(event,'skateshoes')">Skateshoes</li>
+                        <li onclick="searchByStyle(event,'suede chuKka')">Suede Chukka</li>
+                        <li onclick="searchByStyle(event,'brogue')">Brogue</li>
+                        <li onclick="searchByStyle(event,'nike')">Nike</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Color</button>
+                    <ul class="dropdown-content">
+                        <li onclick="searchByColor(event,'black')">Black</li>
+                        <li onclick="searchByColor(event,'brown')">Brown</li>
+                        <li onclick="searchByColor(event,'blue')">Blue</li>
+                        <li onclick="searchByColor(event,'red')">Red</li>
+                        <li onclick="searchByColor(event,'white')">White</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Size</button>
+                    <ul class="dropdown-content">
+                        <li onclick="searchBySize(event,'4')">4</li>
+                        <li onclick="searchBySize(event,'6')">6</li>
+                        <li onclick="searchBySize(event,'8')">8</li>
+                        <li onclick="searchBySize(event,'10')">10</li>
+                        <li onclick="searchBySize(event,'12')">12</li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <button class="dropbtn">Price</button>
+                    <ul class="dropdown-content">
+                        <li onclick="searchByPrice(event,'£10')">£10</li>
+                        <li onclick="searchByPrice(event,'£20')">£20</li>
+                        <li onclick="searchByPrice(event,'£30')">£30</li>
+                        <li onclick="searchByPrice(event,'£40')">£40</li>
+                    </ul>
+                </li>
+            </ul>
+             <div> <h2 class="text-5xl text-center pt-10">Men And Womens Shoes Collection</h2></div>
+        </div>
+        <div class="poster">
+            <img src="description/banner.jpg" alt="poster image" >
+           
+        </div>
+        <div class="products">
+        
+        </div>
+       
+    </main>
+    <div>
+
+    </div>
+
+
+</body>
+
+</html>
